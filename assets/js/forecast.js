@@ -258,10 +258,3 @@ document.querySelector("form").addEventListener("submit", (event) =>{
         
       });
 });
-
-/*
-https://api.openweathermap.org/data/2.5/onecall?lat=47.5&lon=19.04&lang=hu&units=metric&appid=433675f8a176f2a9b6abb936e6dda3e7
-https://openweathermap.org/weather-conditions#How-to-get-icon-URL
-https://codepen.io/mattfroese/pen/WaeYQV
-https://bithacker.dev/fetch-weather-openweathermap-api-javascript
-*/
