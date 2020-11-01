@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="./assets/css/condition.css">
+    <title>Időjárás</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="head_img">
+                <img src="./assets/img/pngwing.com.png" />
+            </div>
+            <div class="form_container">
+                <form action="#" class="search">
+                        <label>
+                            <input type="text" class="fld_search" name="city" placeholder="Adja meg a települést" required/>
+                        </label>
+                        <button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
+                </form> 
+            </div>
+        </div>
+        <div class="sec_cont">
+            <section class="js-now now">
+                <h1>Kérem adjon meg egy Várost a keresőbe!</h1>
+            </section>
+            
+            <section class="js-days days_section"></section>
+        </div>
+    </div>
+    
+<script src="https://kit.fontawesome.com/f98dea6f74.js" crossorigin="anonymous"></script>
+<script src="./assets/js/forecast.js"></script>
+</body>
+</html>
