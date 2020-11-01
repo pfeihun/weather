@@ -88,22 +88,24 @@ function weatherCondition(id, cssSelector, c= conditions) {
     }
     /*Új állapot megnézése hozzáadása*/
     if (id >= 200 && id <= 232) {
-      $element.classList.add(c[0]);
+        $element.classList.add(c[0]);
     } else if (id >= 300 && id <= 321) {
-      $element.classList.add(c[1]);
+        $element.classList.add(c[1]);
     } else if (id >= 500 && id <= 531) {
-      $element.classList.add(c[2]);
+        $element.classList.add(c[2]);
     } else if (id >= 600 && id <= 622) {
-      $element.classList.add(c[3]);
+        $element.classList.add(c[3]);
     } else if (id >= 701 && id <= 781) {
-      $element.classList.add(c[4]);
+        $element.classList.add(c[4]);
     } else if (id == 800) {
-      $element.classList.add(c[5]);
-    } else {
-      $element.classList.add(c[6]);
+        $element.classList.add(c[5]);
+    }  else if (id == 000) {
+        $element.classList.add(c[7]);
+    }  else {
+        $element.classList.add(c[6]);
     }
   }
-let conditions = ["thunder", "drizzle","rainy", "snowy","athmosphere","sunny","cloudy" ];
+let conditions = ["thunder", "drizzle","rainy", "snowy","athmosphere","sunny","cloudy","error"];
 let cityName= '';
 let weather= {};
 let alerts = {};
@@ -146,9 +148,6 @@ document.querySelector("form").addEventListener("submit", (event) =>{
         if (typeof(forecast.alerts) == "undefined"){
             alerts = {
                 "event" : "Nincs érvényben riasztás!",
-                "start" : "-----",
-                "end" : "-----",
-                "sender_name" : "----",
             }
         } else {
              alerts = forecast.alerts[0];
@@ -236,7 +235,28 @@ document.querySelector("form").addEventListener("submit", (event) =>{
       if(alerts.event == "Nincs érvényben riasztás!"){
             document.querySelector(".alert").classList.add("none")
         }
-    });
+    })
+    .catch(function (error) {
+        let markup;
+        let moreDay = "---";
+        if (error == "TypeError: Cannot read property 'lon' of undefined"){
+            markup = `
+                <h1>Hoppá! A város nevét rosszul adtad meg! probáld újra!</h1>
+                <p>A hiba oka: ${error}</p>
+            `;
+            document.querySelector(".js-now").innerHTML = markup;
+            document.querySelector(".js-days").innerHTML = moreDay;
+            weatherCondition(000, `.wrapper`);
+            weatherCondition(000, `.days`);
+        }else{
+            markup =`<h1>Hoppá! Váratlan hiba!</h1> <p>késöbb probáld újra!</p><p>A hiba oka: ${error}</p>`;
+            document.querySelector(".js-now").innerHTML = markup;
+            document.querySelector(".js-days").innerHTML = moreDay;
+            weatherCondition(000, `.wrapper`);
+            weatherCondition(000, `.days`);
+        };
+        
+      });
 });
 
 /*
