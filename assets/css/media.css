@@ -1,0 +1,53 @@
+@media (min-width: 600px)/*break point*/{
+    .header{
+        max-height: 100px;
+    }
+    .header img{
+        width:50%;
+        max-width:100px;
+    }
+    .fld_search{
+        max-width: 350px;
+        padding: 10px;
+    }
+    .btn_search{
+        height: 35px;
+        width: 40px;
+    }
+   
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+    .today{
+        max-width: 50%;
+    }
+    .hours{
+        max-width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hourly{
+        min-width: 50px;
+        border-right: 1px solid black;
+        padding: 0 7px;
+        margin:0 auto;
+        margin-bottom: 5px;
+    }
+
+    .now p{
+        text-align: center;
+    }
+
+    .days_section{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .days{
+        max-width: 300px;
+        padding: 0 7px;
+        margin:0 auto;
+        margin-bottom: 5px;
+    }
+}
