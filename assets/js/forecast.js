@@ -209,6 +209,7 @@ document.querySelector("form").addEventListener("submit", (event) =>{
         weatherCondition(weather.id, ".wrapper")
         
         //előrejelzések:
+        document.querySelector(".js-days").innerHTML = " "
         for (let i = 0; i < days.length; i++){
             
             let div = document.createElement('div');
