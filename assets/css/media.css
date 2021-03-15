@@ -28,7 +28,7 @@
         flex-wrap: wrap;
     }
     .hourly{
-        min-width: 50px;
+        width: 200px;
         border-right: 1px solid black;
         padding: 0 7px;
         margin:0 auto;

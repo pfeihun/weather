@@ -24,6 +24,7 @@
     color: black;
 }
 .rainy .hourly,.days{
+    margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 5px;
     -webkit-box-shadow: 1px 8px 13px 5px rgba(0,0,0,0.4); 
@@ -57,6 +58,7 @@
     text-shadow: none;
 }
 .sunny .hourly, .days{
+    margin-bottom: 15px;
     border: 1px solid black;
     border-radius: 5px;
     -webkit-box-shadow: 1px 8px 13px 5px rgba(0,0,0,0.4); 
@@ -85,6 +87,7 @@
     text-shadow: none;
 }
 .snowy .hourly, .days{
+    margin-bottom: 15px;
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -113,6 +116,7 @@
     text-shadow: none;
 }
 .thunder .hourly, .days{
+    margin-bottom: 15px;
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -139,6 +143,7 @@
     color: black;
 }
 .drizzle .hourly,.days{
+    margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 5px;
     -webkit-box-shadow: 1px 8px 13px 5px rgba(0,0,0,0.4); 
@@ -166,6 +171,7 @@
     color: black;
 }
 .athmosphere .hourly,.days{
+    margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 5px;
     -webkit-box-shadow: 1px 8px 13px 5px rgba(0,0,0,0.4); 
@@ -187,6 +193,8 @@
     color: black;
 }
 .cloudy .hourly, .days{
+    padding-bottom: 0;
+    margin-bottom: 15px;
     border: 1px solid black;
     border-radius: 5px;
     -webkit-box-shadow: 1px 8px 13px 5px rgba(0,0,0,0.4); 

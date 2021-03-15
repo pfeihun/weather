@@ -6,11 +6,11 @@ function convert (unixTimeStamp){
     let date = new Date(unixTime*1000);
     //Dátum vissza nyerése a get segítségével
     let years = date.getFullYear();
-    //hónapok vissza adása: jelenlegi hónap száma - 1
-    let month = months_arr[date.getMonth()-1];
+    //hónapok vissza adása
+    let month = months_arr[date.getMonth()];
     let days = date.getDate();
     // Dátum összefűzés
-    let convData = years+' '+month+' '+days+':';
+    let convData = years+' '+month+' '+days;
     return convData;
 };
 function hourConvert (unixTimeStamp){
@@ -239,11 +239,11 @@ document.querySelector("form").addEventListener("submit", (event) =>{
     })
     .catch(function (error) {
         let markup;
-        let moreDay = "---";
+        let moreDay = " ";
         if (error == "TypeError: Cannot read property 'lon' of undefined"){
             markup = `
                 <h1>Hoppá! A város nevét rosszul adtad meg! probáld újra!</h1>
-                <p>A hiba oka: ${error}</p>
+                
             `;
             document.querySelector(".js-now").innerHTML = markup;
             document.querySelector(".js-days").innerHTML = moreDay;
